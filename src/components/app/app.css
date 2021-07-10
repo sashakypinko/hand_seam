@@ -1,0 +1,25 @@
+body {
+    background-color: #fffefe;
+    overflow-x: hidden;
+    font-family: Roboto, sans-serif;
+}
+
+.blue-btn {
+    background-color: #56b6ce;
+    color: white;
+}
+
+.blue-btn:hover {
+    background-color: #1c6274;
+    color: white;
+}
+
+.pink-btn {
+    background-color: #ffa4ba;
+    color: #363636;
+}
+
+.pink-btn:hover {
+    background-color: #ff426d;
+    color: #363636;
+}
