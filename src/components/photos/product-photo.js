@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import ProductBadge from "../products-item/product-badge";
+import ProductBadge from "../products/products-item/product-badge";
 
 const ProductPhoto = ({
                           productId = 0,

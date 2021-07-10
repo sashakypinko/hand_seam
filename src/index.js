@@ -10,6 +10,7 @@ import {ConnectedRouter} from "connected-react-router";
 
 import './bootstrap';
 import './main.css';
+import ScrollToTop from "./components/scroll-to-top";
 
 const browserHistory = createBrowserHistory();
 const store = initStore(browserHistory);
@@ -18,6 +19,7 @@ ReactDOM.render(
     <Provider store={store}>
         <ErrorBoundry>
             <ConnectedRouter history={browserHistory}>
+                <ScrollToTop/>
                 <App/>
             </ConnectedRouter>
         </ErrorBoundry>

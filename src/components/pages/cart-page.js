@@ -1,6 +1,6 @@
 import React from "react";
-import CartList from "../cart-list";
 import Divider from "../divider";
+import CartList from "../cart/cart-list";
 
 const CartPage = () => {
     return (

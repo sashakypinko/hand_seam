@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import ProductsListContainer from "../products-list-container";
 import Filters from "./fllters";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchProducts} from "../../store/actions/product-list";
@@ -8,6 +7,7 @@ import ControlPanel from "./control-panel";
 import Breadcrumbs from "../breadcrumbs";
 import {useParams} from "react-router";
 import {Container} from "react-bootstrap";
+import ProductsListContainer from "./products-list-container";
 
 const VIEW_TYPE_ROW = 'row';
 const VIEW_TYPE_TILE = 'tile';

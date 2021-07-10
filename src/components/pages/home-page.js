@@ -1,12 +1,12 @@
 import React from "react";
 import CatalogSection from "../sections/catalog-section";
-import AdvantagesSection from "../sections/advantages-section";
 import PopularProductsSection from "../sections/popular-products-section";
 import Divider from "../divider";
 import TestimonialsSection from "../sections/testimonials-section";
 import GreetingsSection from "../sections/greetings-section";
 import DeliveryInformationSection from "../sections/delivery-information-section";
-import {useSelector} from "react-redux";
+import AddToCartModal from "../products/add-to-cart-modal";
+import AddedItemModal from "../cart/added-item-modal";
 
 const HomePage = () => {
     return (
@@ -21,6 +21,8 @@ const HomePage = () => {
             <Divider/>
             <DeliveryInformationSection/>
             <Divider/>
+            <AddToCartModal/>
+            <AddedItemModal/>
         </div>
     );
 };

@@ -39,7 +39,8 @@ export const uaTranslations = {
     'buttons.buy': 'Купити',
     'buttons.details': 'Детальніше',
 
-    'cart.modal.title': 'Ви добавили товар в кошик',
+    'cart.add-item-modal.title': 'Інформація про товар',
+    'cart.added-item-modal.title': 'Ви добавили товар в кошик',
     'cart.modal.button.continue-shopping': 'Продовжити покупки',
     'cart.modal.button.go-to-cart': 'Перейти в кошик',
 

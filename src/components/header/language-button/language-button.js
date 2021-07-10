@@ -33,7 +33,7 @@ const LanguageButton = () => {
                     {
                         languages.map((language) => {
                             return (
-                                <Dropdown.Item onClick={() => changeLanguage(language)}>
+                                <Dropdown.Item key={language} onClick={() => changeLanguage(language)}>
                                     <Flag name={languageIconNames[language]}/>
                                 </Dropdown.Item>
                             );

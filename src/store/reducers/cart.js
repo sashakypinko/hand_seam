@@ -10,10 +10,14 @@ import {
     FETCH_CART_ITEMS_COUNT_SUCCESS,
     FETCH_CART_LIST_FAILURE,
     FETCH_CART_LIST_REQUEST,
-    FETCH_CART_LIST_SUCCESS, HIDE_ADDED_ITEM_MODAL,
+    FETCH_CART_LIST_SUCCESS,
+    HIDE_ADD_TO_CART_MODAL,
+    HIDE_ADDED_ITEM_MODAL,
     REMOVE_CART_ITEM_FAILURE,
     REMOVE_CART_ITEM_REQUEST,
-    REMOVE_CART_ITEM_SUCCESS, SHOW_ADDED_ITEM_MODAL,
+    REMOVE_CART_ITEM_SUCCESS,
+    SHOW_ADD_TO_CART_MODAL,
+    SHOW_ADDED_ITEM_MODAL,
 } from "../actions/cart";
 import {CartState} from "../init-state";
 
@@ -79,17 +83,20 @@ const cart = (state = CartState, {type, payload}) => {
         case ADD_CART_ITEM_REQUEST:
             return {
                 ...state,
+                adding: true,
                 cartItems: []
             };
 
         case ADD_CART_ITEM_SUCCESS:
             return {
-                ...state
+                ...state,
+                adding: false,
             };
 
         case ADD_CART_ITEM_FAILURE:
             return {
                 ...state,
+                adding: false,
                 error: true
             };
 
@@ -148,13 +155,30 @@ const cart = (state = CartState, {type, payload}) => {
         case SHOW_ADDED_ITEM_MODAL:
             return {
                 ...state,
+                addedItem: payload,
+                addToCartModalStatus: false,
                 addedItemModalStatus: true
             };
 
         case HIDE_ADDED_ITEM_MODAL:
             return {
                 ...state,
+                addedItem: {},
                 addedItemModalStatus: false
+            };
+
+        case SHOW_ADD_TO_CART_MODAL:
+            return {
+                ...state,
+                addingProduct: payload,
+                addToCartModalStatus: true
+            };
+
+        case HIDE_ADD_TO_CART_MODAL:
+            return {
+                ...state,
+                addingProduct: {},
+                addToCartModalStatus: false
             };
 
         default:

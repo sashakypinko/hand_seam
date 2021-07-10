@@ -6,7 +6,7 @@ import {enTranslations} from '../../translations/en';
 import moment from "moment";
 import {RU, UA, EN} from "./languages";
 
-const DEFAULT_LNG = EN.code;
+const DEFAULT_LNG = RU.code;
 
 moment.locale(DEFAULT_LNG);
 

@@ -16,7 +16,7 @@ const CategoriesFilter = ({categories, selectedCategories, handleChange}) => {
                     onChange={e => handleChange(e, 'categories')}>
                     {
                         categories.map(({title, id}) => (
-                            <MenuItem key={title} value={id}>{title}</MenuItem>
+                            <MenuItem key={id} value={id}>{title}</MenuItem>
                         ))
                     }
                 </Select>

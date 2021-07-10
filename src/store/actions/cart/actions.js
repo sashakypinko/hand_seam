@@ -10,10 +10,12 @@ import {
     FETCH_CART_ITEMS_COUNT_SUCCESS,
     FETCH_CART_LIST_FAILURE,
     FETCH_CART_LIST_REQUEST,
-    FETCH_CART_LIST_SUCCESS, HIDE_ADDED_ITEM_MODAL,
+    FETCH_CART_LIST_SUCCESS, HIDE_ADD_TO_CART_MODAL,
+    HIDE_ADDED_ITEM_MODAL,
     REMOVE_CART_ITEM_FAILURE,
     REMOVE_CART_ITEM_REQUEST,
-    REMOVE_CART_ITEM_SUCCESS, SHOW_ADDED_ITEM_MODAL
+    REMOVE_CART_ITEM_SUCCESS, SHOW_ADD_TO_CART_MODAL,
+    SHOW_ADDED_ITEM_MODAL
 } from './action-types';
 
 export const fetchCartList = () => {
@@ -112,14 +114,28 @@ export const changeCartItemCountError = () => {
     };
 };
 
-export const showAddedItemModal = () => {
+export const showAddedItemModal = (addedItem) => {
     return {
-        type: SHOW_ADDED_ITEM_MODAL
+        type: SHOW_ADDED_ITEM_MODAL,
+        payload: addedItem
     };
-}
+};
 
 export const hideAddedItemModal = () => {
     return {
         type: HIDE_ADDED_ITEM_MODAL
     };
-}
+};
+
+export const showAddToCartModal = (product) => {
+    return {
+        type: SHOW_ADD_TO_CART_MODAL,
+        payload: product
+    };
+};
+
+export const hideAddToCartModal = () => {
+    return {
+        type: HIDE_ADD_TO_CART_MODAL
+    };
+};

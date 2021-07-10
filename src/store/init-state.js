@@ -2,7 +2,11 @@ export const CartState = {
     cartItems: [],
     cartItemsCount: 0,
     cartItemsTotalPrice: 0,
+    addedItem: {},
+    addingProduct: {},
     addedItemModalStatus: false,
+    addToCartModalStatus: false,
+    adding: false,
     loading: false,
     error: false
 };

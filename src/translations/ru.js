@@ -39,7 +39,8 @@ export const ruTranslations = {
     'buttons.buy': 'Купить',
     'buttons.details': 'Детальнее',
 
-    'cart.modal.title': 'Вы добавили товар в корзину',
+    'cart.add-item-modal.title': 'Информация о товаре',
+    'cart.added-item-modal.title': 'Вы добавили товар в корзину',
     'cart.modal.button.continue-shopping': 'Продолжить покупки',
     'cart.modal.button.go-to-cart': 'Перейти в корзину',
 

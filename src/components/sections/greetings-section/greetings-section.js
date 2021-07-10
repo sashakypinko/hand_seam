@@ -7,10 +7,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTshirt} from "@fortawesome/free-solid-svg-icons";
 
 import './greetings-section.css';
-import ProductsCarousel from "../../products-carousel";
 import FindProductsButton from "./find-products-button";
 import {Col} from "styled-bootstrap-grid";
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
+import ProductsCarousel from "../../products/products-carousel";
 
 const BlueTshirtIcon = () => <FontAwesomeIcon icon={faTshirt}
                                               style={{fontSize: '27px', color: '#1266f1', marginLeft: '-11px'}}/>;

@@ -17,3 +17,11 @@ export const selectCartTotalPrice = ({cart}) => cart.cartItemsTotalPrice;
 export const selectProductPagesCount = ({productList}) => productList.pagesCount;
 
 export const selectAddedItemModalStatus = ({cart}) => cart.addedItemModalStatus;
+
+export const selectAddToCartModalStatus = ({cart}) => cart.addToCartModalStatus;
+
+export const selectAddedItem = ({cart}) => cart.addedItem;
+
+export const selectAddingItem = ({cart}) => cart.addingProduct;
+
+export const selectCartItemAdding = ({cart}) => cart.adding;

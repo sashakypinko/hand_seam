@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from "../section";
-import ProductsListContainer from "../../products-list-container";
+import ProductsListContainer from "../../products/products-list-container";
 
 const PopularProductsSection = () => {
     return (

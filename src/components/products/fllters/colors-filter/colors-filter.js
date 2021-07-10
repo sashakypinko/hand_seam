@@ -12,6 +12,7 @@ const ColorsFilter = ({colors}) => {
                     colors.map(({code}) => {
                         return (
                             <label className="btn rounded-circle border-inset-grey p-3 m-2"
+                                   key={code}
                                    style={{background: code}}>
                                 <input type="checkbox" autoComplete="off"/>
                             </label>

@@ -19,7 +19,8 @@ const Pagination = ({handleChangePage, pagesCount, currentPage}) => {
                     {
                         paginateButtonNumbers.map((number) => {
                             return (
-                                <li className={`page-item ${number === currentPage && 'active'}`}>
+                                <li className={`page-item ${number === currentPage && 'active'}`}
+                                    key={number}>
                                     <a className="page-link"
                                        onClick={() => handleChangePage(number)}>
                                         {number}

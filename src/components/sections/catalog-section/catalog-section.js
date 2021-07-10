@@ -1,6 +1,6 @@
 import React from 'react';
-import CategoryList from '../../category-list';
 import Section from "../section";
+import CategoryList from "../../categories/category-list";
 
 
 const CatalogSection = () => {

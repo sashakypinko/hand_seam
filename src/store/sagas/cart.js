@@ -1,16 +1,18 @@
 import {call, put} from 'redux-saga/effects';
 import {CartApi} from "../../services/cart-service";
-import {push} from 'react-router-redux';
 import {
     addCartItemError,
-    cartItemAdded, cartItemCountChanged,
+    cartItemAdded,
+    cartItemCountChanged,
     cartItemRemoved,
     cartItemsCountError,
     cartItemsCountLoaded,
     cartListError,
-    cartListLoaded, changeCartItemCountError,
+    cartListLoaded,
+    changeCartItemCountError,
     fetchCartItemsCount as fetchItemsCount,
-    removeCartItemError, showAddedItemModal
+    removeCartItemError,
+    showAddedItemModal
 } from "../actions/cart";
 
 export function* fetchCartList() {
@@ -28,7 +30,7 @@ export function* addCartItem({payload}) {
         yield call(CartApi.addCartItem, payload);
         yield put(fetchItemsCount());
         yield put(cartItemAdded());
-        yield put(showAddedItemModal());
+        yield put(showAddedItemModal(payload.order.product));
     } catch (error) {
         console.log([error]);
         yield put(addCartItemError());
