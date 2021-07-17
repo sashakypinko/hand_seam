@@ -7,6 +7,7 @@ import GreetingsSection from "../sections/greetings-section";
 import DeliveryInformationSection from "../sections/delivery-information-section";
 import AddToCartModal from "../products/add-to-cart-modal";
 import AddedItemModal from "../cart/added-item-modal";
+import DiscountModal from "../modals/discount-modal";
 
 const HomePage = () => {
     return (

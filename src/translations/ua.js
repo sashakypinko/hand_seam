@@ -64,4 +64,7 @@ export const uaTranslations = {
 
     'cart.list.title': 'Кошик',
     'cart.list.footer-message': 'Не відкладайте покупку, додання товарів в кошик не означає іх бронювання.',
+
+    'discount.accept-button': 'Отримати',
+    'discount.decline-button': 'Ні, дякую'
 };

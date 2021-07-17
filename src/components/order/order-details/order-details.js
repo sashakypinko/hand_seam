@@ -1,7 +1,7 @@
 import React from 'react';
 import {Trans} from "react-i18next";
-import PriceLabel from "../../../products/products-item/price-label";
-import {BASE_DARK} from "../../../../constants/colors";
+import PriceLabel from "../../products/products-item/price-label";
+import {BASE_DARK} from "../../../constants/colors";
 
 const OrderDetails = ({total}) => {
 

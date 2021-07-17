@@ -19,6 +19,10 @@ import {fetchCategories} from "./category-list";
 import {fetchFilterFields} from "./filter-fields";
 import {fetchSizes} from "./size-list";
 import {addCartItem, changeCartItemsCount, fetchCartItemsCount, fetchCartList, removeCartItem} from "./cart";
+import {ADD_DISCOUNT_CODE_REQUEST, FETCH_DISCOUNTS_REQUEST, GET_DISCOUNT_CODES_REQUEST} from "../actions/discount";
+import {addDiscountCode, fetchDiscountCodes, fetchDiscounts} from "./discount";
+import {CHANGE_LANGUAGE_REQUEST, FETCH_CLIENT_REQUEST} from "../actions/client";
+import {changeLanguage, fetchClient} from "./client";
 
 function* rootSaga() {
     yield all([
@@ -31,7 +35,12 @@ function* rootSaga() {
         takeEvery(REMOVE_CART_ITEM_REQUEST, removeCartItem),
         takeEvery(FETCH_CART_LIST_REQUEST, fetchCartList),
         takeEvery(FETCH_CART_ITEMS_COUNT_REQUEST, fetchCartItemsCount),
-        takeEvery(CHANGE_CART_ITEM_COUNT_REQUEST, changeCartItemsCount)
+        takeEvery(CHANGE_CART_ITEM_COUNT_REQUEST, changeCartItemsCount),
+        takeEvery(FETCH_DISCOUNTS_REQUEST, fetchDiscounts),
+        takeEvery(ADD_DISCOUNT_CODE_REQUEST, addDiscountCode),
+        takeEvery(GET_DISCOUNT_CODES_REQUEST, fetchDiscountCodes),
+        takeEvery(FETCH_CLIENT_REQUEST, fetchClient),
+        takeEvery(CHANGE_LANGUAGE_REQUEST, changeLanguage),
     ]);
 }
 

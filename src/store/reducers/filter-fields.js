@@ -10,6 +10,7 @@ const filterFields = (state= FilterFieldsState, action) => {
     switch (action.type) {
         case FETCH_FILTER_FIELDS_REQUEST:
             return {
+                ...state,
                 fields: [],
                 loading: true,
                 error: null
@@ -17,6 +18,7 @@ const filterFields = (state= FilterFieldsState, action) => {
 
         case FETCH_FILTER_FIELDS_SUCCESS:
             return {
+                ...state,
                 fields: action.payload,
                 loading: false,
                 error: null
@@ -24,6 +26,7 @@ const filterFields = (state= FilterFieldsState, action) => {
 
         case FETCH_FILTER_FIELDS_FAILURE:
             return {
+                ...state,
                 fields: [],
                 loading: false,
                 error: action.payload

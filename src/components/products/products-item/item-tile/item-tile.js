@@ -11,7 +11,7 @@ const Tile = styled.div`
     border-radius: 10px;
 `;
 
-const ItemTile = ({product, width, handleAddToCart}) => {
+const ItemTile = ({product, width, handleAddToCart, handleClick}) => {
     const {id, name, price, old_price, category, primary_photo, secondary_photo, status} = product;
 
     return (
@@ -19,6 +19,7 @@ const ItemTile = ({product, width, handleAddToCart}) => {
             <Tile>
                 <ProductPhoto
                     productId={id}
+                    handleClick={handleClick}
                     primaryPhoto={primary_photo}
                     secondaryPhoto={secondary_photo}
                     badge={{text: 'Sale'}}/>

@@ -39,7 +39,7 @@ const AddedItemModal = ({open, hideModal, product = {}}) => {
                     <GoToCartButton hideModal={hideModal}/>
                 </div>
                 <hr/>
-                <RelatedProducts/>
+                <RelatedProducts handleItemClick={hideModal}/>
             </Modal.Body>
             <Modal.Footer>
                 <ContinueShoppingButton hideModal={hideModal}/>

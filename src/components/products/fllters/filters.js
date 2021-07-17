@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button} from "@material-ui/core";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectFilterFields} from "../../../store/selectors";
 import ErrorIndicator from "../../error-indicator";
 import Search from "./search";
@@ -9,6 +9,8 @@ import SizesFilter from "./sizes-filter";
 import PriceFilter from "./price-filter";
 import ColorsFilter from "./colors-filter";
 import {Trans} from "react-i18next";
+import {fetchFilterFields} from "../../../store/actions/filter-fields";
+import FilterSkeleton from "./filter-skeleton";
 
 const Filters = ({filterFields, loadProducts}) => {
     const {
@@ -34,17 +36,24 @@ const Filters = ({filterFields, loadProducts}) => {
     const [filter, setFilter] = useState(defaultFilter);
     const [search, setSearch] = useState('');
 
-    useEffect(() => setFilter(defaultFilter), [filterFields]);
-    useEffect(() => loadProducts({filter}), [filter]);
+    useEffect(() => {
+        setFilter(defaultFilter)
+    }, [filterFields]);
+
+    useEffect(() => {
+        loadProducts({filter})
+    }, [filter]);
 
     const handleChangeFilter = (e, name) => {
         const newFilter = Object.assign({}, filter);
+
         newFilter[name] = e.target.value;
         setFilter(newFilter);
     };
 
     const handleChangePrice = (event, [min, max]) => {
         const newFilter = Object.assign({}, filter);
+
         newFilter.price = {min, max}
         setFilter(newFilter);
     };
@@ -55,6 +64,7 @@ const Filters = ({filterFields, loadProducts}) => {
 
     const setFilterSearch = () => {
         const newFilter = Object.assign({}, filter);
+
         newFilter.search = search;
         setFilter(newFilter);
     }
@@ -93,10 +103,19 @@ const Filters = ({filterFields, loadProducts}) => {
 };
 
 const FiltersContainer = ({loadProducts}) => {
-    const {fields, error} = useSelector(selectFilterFields);
+    const {fields, loading, error} = useSelector(selectFilterFields);
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchFilterFields());
+    }, []);
 
     if (error) {
         return <ErrorIndicator/>;
+    }
+
+    if (loading) {
+        return <FilterSkeleton/>;
     }
 
     return <Filters filterFields={fields} loadProducts={loadProducts}/>

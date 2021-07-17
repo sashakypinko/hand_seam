@@ -6,6 +6,7 @@ const product = (state = ProductState, action) => {
     switch (action.type) {
         case FETCH_PRODUCT_REQUEST:
             return {
+                ...state,
                 product: {},
                 loading: true,
                 error: null
@@ -13,6 +14,7 @@ const product = (state = ProductState, action) => {
 
         case FETCH_PRODUCT_SUCCESS:
             return {
+                ...state,
                 product: action.payload,
                 loading: false,
                 error: null
@@ -20,6 +22,7 @@ const product = (state = ProductState, action) => {
 
         case FETCH_PRODUCT_FAILURE:
             return {
+                ...state,
                 product: [],
                 loading: false,
                 error: action.payload

@@ -25,3 +25,11 @@ export const selectAddedItem = ({cart}) => cart.addedItem;
 export const selectAddingItem = ({cart}) => cart.addingProduct;
 
 export const selectCartItemAdding = ({cart}) => cart.adding;
+
+export const selectVisitDiscount = ({discount}) => discount.onVisit || {};
+
+export const selectPaymentDiscount = ({discount}) => discount.onPay || {};
+
+export const selectDiscountCodes = ({discount}) => discount;
+
+export const selectClient = ({client}) => client;

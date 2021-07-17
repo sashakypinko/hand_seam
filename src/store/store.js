@@ -9,16 +9,26 @@ import {connectRouter} from "connected-react-router";
 const initStore = (history = {}) => {
     const sagaMiddleware = createSagaMiddleware();
 
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+            trace: true,
+            traceLimit: 25
+        });
+
     const store = createStore(
         combineReducers({
             ...reducers,
             router: connectRouter(history)
         }),
-        applyMiddleware(
-            sagaMiddleware,
-            thunkMiddleware,
-            routerMiddleware(history)
-        ));
+        composeEnhancers(
+            applyMiddleware(
+                sagaMiddleware,
+                thunkMiddleware,
+                routerMiddleware(history)
+            )
+        )
+    );
 
     sagaMiddleware.run(rootSaga);
 

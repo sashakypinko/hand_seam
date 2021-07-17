@@ -7,7 +7,7 @@ import ItemTileSimple from "./item-tile-simple";
 import {useDispatch} from "react-redux";
 import {showAddToCartModal} from "../../../store/actions/cart";
 
-const ProductsItem = ({product, width, viewType}) => {
+const ProductsItem = ({product, width, viewType, handleClick}) => {
     const dispatch = useDispatch();
     const views = {
         row: ItemRow,
@@ -21,7 +21,7 @@ const ProductsItem = ({product, width, viewType}) => {
         dispatch(showAddToCartModal(product));
     };
 
-    return <Item product={product} width={width} handleAddToCart={handleAddToCart}/>;
+    return <Item product={product} width={width} handleClick={handleClick} handleAddToCart={handleAddToCart}/>;
 };
 
 export default ProductsItem;

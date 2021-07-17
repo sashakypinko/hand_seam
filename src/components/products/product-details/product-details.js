@@ -10,13 +10,13 @@ import ProductPhotosSkeleton from "./product-photos/product-photos-skeleton";
 import {selectProduct} from "../../../store/selectors";
 import {fetchProduct} from "../../../store/actions/product";
 import ErrorIndicator from "../../error-indicator";
-import AddedItemModal from "../../cart/added-item-modal";
 import {Col} from "react-bootstrap";
 
 
 const ProductDetails = ({product, loading}) => {
     const {
         photos = [],
+        related_products = []
     } = product;
 
     return (
@@ -39,7 +39,7 @@ const ProductDetails = ({product, loading}) => {
             </section>
             <Tabs product={product}/>
             <hr/>
-            <RelatedProducts/>
+            <RelatedProducts products={related_products} loading={loading}/>
         </Container>
     );
 };
@@ -51,7 +51,7 @@ const ProductDetailsContainer = ({id}) => {
 
         useEffect(() => {
             dispatch(fetchProduct(id));
-        }, []);
+        }, [id]);
 
         if (error) {
             return <ErrorIndicator/>;

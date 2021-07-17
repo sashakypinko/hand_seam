@@ -62,4 +62,7 @@ export const enTranslations = {
 
     'cart.list.title': 'Корзина',
     'cart.list.footer-message': 'Не откладывайте покупку, добавление товаров в корзину не означает их бронирование.',
+
+    'discount.accept-button': 'Get it now',
+    'discount.decline-button': 'No, thanks'
 };

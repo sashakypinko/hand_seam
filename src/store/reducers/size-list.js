@@ -6,6 +6,7 @@ const sizeList = (state = SizeListState, action) => {
     switch (action.type) {
         case FETCH_SIZES_REQUEST:
             return {
+                ...state,
                 sizes: [],
                 loading: true,
                 error: null
@@ -13,6 +14,7 @@ const sizeList = (state = SizeListState, action) => {
 
         case FETCH_SIZES_SUCCESS:
             return {
+                ...state,
                 sizes: action.payload.data,
                 loading: false,
                 error: null
@@ -20,6 +22,7 @@ const sizeList = (state = SizeListState, action) => {
 
         case FETCH_SIZES_FAILURE:
             return {
+                ...state,
                 sizes: [],
                 loading: false,
                 error: action.payload

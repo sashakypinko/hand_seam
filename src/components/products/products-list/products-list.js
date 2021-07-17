@@ -9,7 +9,7 @@ import {
     ProductListTilesSkeleton
 } from "./product-list-skeleton";
 
-const ProductsList = ({products, loading, itemWidth = 4, viewType}) => {
+const ProductsList = ({products, loading, itemWidth = 4, viewType, handleItemClick}) => {
     const skeletons = {
         row: ProductListRowsSkeleton,
         tile: ProductListTilesSkeleton,
@@ -30,6 +30,7 @@ const ProductsList = ({products, loading, itemWidth = 4, viewType}) => {
                                     key={product.id}
                                     product={product}
                                     width={itemWidth}
+                                    handleClick={handleItemClick}
                                     viewType={viewType}/>
                             );
                         })

@@ -6,6 +6,7 @@ const categoryList = (state = CategoryListState, action) => {
     switch (action.type) {
         case FETCH_CATEGORIES_REQUEST:
             return {
+                ...state,
                 categories: [],
                 loading: true,
                 error: null
@@ -13,6 +14,7 @@ const categoryList = (state = CategoryListState, action) => {
 
         case FETCH_CATEGORIES_SUCCESS:
             return {
+                ...state,
                 categories: action.payload.data,
                 loading: false,
                 error: null
@@ -20,6 +22,7 @@ const categoryList = (state = CategoryListState, action) => {
 
         case FETCH_CATEGORIES_FAILURE:
             return {
+                ...state,
                 categories: [],
                 loading: false,
                 error: action.payload

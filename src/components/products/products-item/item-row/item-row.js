@@ -6,7 +6,7 @@ import AddToCartButton from "../../../buttons/add-to-cart-button";
 import DetailsButton from "../../../buttons/details-button";
 import AddToFavoritesButton from "../../../buttons/add-to-favorites-button";
 
-const ItemRow = ({product, handleAddToCart}) => {
+const ItemRow = ({product, handleAddToCart, handleClick}) => {
     const {
         id,
         name,
@@ -25,6 +25,7 @@ const ItemRow = ({product, handleAddToCart}) => {
                 <Col md={5} lg={3} xl={3}>
                     <ProductPhoto
                         productId={id}
+                        handleClick={handleClick}
                         primaryPhoto={primary_photo}
                         secondaryPhoto={secondary_photo}
                         badge={{text: 'Sale'}}/>

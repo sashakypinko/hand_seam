@@ -3,7 +3,7 @@ import PriceLabel from "../price-label";
 import {ProductPhoto} from "../../../photos";
 import AddToCartButton from "../../../buttons/add-to-cart-button";
 
-const ItemTileSimple = ({product, handleAddToCart}) => {
+const ItemTileSimple = ({product, handleAddToCart, handleClick}) => {
     const {id, name, price, old_price, primary_photo, secondary_photo, status} = product;
 
     return (
@@ -11,6 +11,7 @@ const ItemTileSimple = ({product, handleAddToCart}) => {
             <div>
                 <ProductPhoto
                     productId={id}
+                    handleClick={handleClick}
                     primaryPhoto={primary_photo}
                     secondaryPhoto={secondary_photo}
                     badge={{text: status ? 'Sale' : ''}}/>

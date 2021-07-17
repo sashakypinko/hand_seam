@@ -63,4 +63,7 @@ export const ruTranslations = {
 
     'cart.list.title': 'Корзина',
     'cart.list.footer-message': 'Не откладывайте покупку, добавление товаров в корзину не означает их бронирование.',
+
+    'discount.accept-button': 'Получить',
+    'discount.decline-button': 'Нет, спасибо'
 };

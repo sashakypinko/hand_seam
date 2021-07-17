@@ -1,8 +1,9 @@
-import {useSelector} from "react-redux";
 import React from "react";
-import ProductsList from "../products-list";
-import ErrorIndicator from "../../error-indicator";
+import {useSelector} from "react-redux";
 import {selectProductList} from "../../../store/selectors";
+import ErrorIndicator from "../../error-indicator";
+import ProductsList from "../products-list";
+
 
 const ProductsListContainer = ({itemWidth = 4, viewType = 'tile'}) => {
     const {products, loading, error} = useSelector(selectProductList);
@@ -14,4 +15,4 @@ const ProductsListContainer = ({itemWidth = 4, viewType = 'tile'}) => {
     return <ProductsList products={products} loading={loading} itemWidth={itemWidth} viewType={viewType}/>;
 };
 
-export default ProductsListContainer;
+export default ProductsListContainer

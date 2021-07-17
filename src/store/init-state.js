@@ -43,3 +43,17 @@ export const SizeListState = {
     error: null,
     loading: true
 };
+
+export const DiscountState = {
+    onVisit: {},
+    onPay: {},
+    codes: [],
+    loading: true,
+    error: null
+};
+
+export const ClientState = {
+    client: {},
+    loading: true,
+    error: null
+};

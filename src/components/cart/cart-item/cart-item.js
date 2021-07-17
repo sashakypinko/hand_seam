@@ -70,7 +70,7 @@ const CartItem = ({cartItem}) => {
                             </div>
                         </div>
                         <div className="d-flex justify-content-between align-items-center">
-                            <div>
+                            <div className="d-flex">
                                 <a type="button"
                                    onClick={handleRemoveOrder}
                                    className="card-link-secondary small text-uppercase mr-3">
