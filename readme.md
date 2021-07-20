@@ -13,8 +13,8 @@
 
 
 ## Server address:
-
-<a href="http://18.191.229.0"> http://18.191.229.00 </a>
+ 
+<a href="http://18.191.229.0"> http://18.191.229.0 </a>
 
 ## Admin dashboard
 
