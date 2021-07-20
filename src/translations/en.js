@@ -64,5 +64,9 @@ export const enTranslations = {
     'cart.list.footer-message': 'Не откладывайте покупку, добавление товаров в корзину не означает их бронирование.',
 
     'discount.accept-button': 'Get it now',
-    'discount.decline-button': 'No, thanks'
+    'discount.decline-button': 'No, thanks',
+
+    'footer.about.link': 'About us',
+    'footer.about.description': 'We specialize on making cool and beautiful t-shirts and hoodies. If you want to buy something it\'s a good idea to do it with us.',
+    'footer.products.link': 'Products'
 };

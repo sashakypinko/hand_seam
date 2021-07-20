@@ -9,7 +9,14 @@ import {
     ProductListTilesSkeleton
 } from "./product-list-skeleton";
 
-const ProductsList = ({products, loading, itemWidth = 4, viewType, handleItemClick}) => {
+const ProductsList = (
+    {
+        products = [],
+        loading,
+        itemWidth = 4,
+        viewType = 'tile',
+        handleItemClick
+    }) => {
     const skeletons = {
         row: ProductListRowsSkeleton,
         tile: ProductListTilesSkeleton,

@@ -4,6 +4,8 @@ export const selectCategoryList = ({categoryList}) => categoryList;
 
 export const selectProduct = ({product}) => product;
 
+export const selectPopularProducts = ({popularProducts}) => popularProducts;
+
 export const selectFilterFields = ({filterFields}) => filterFields;
 
 export const selectSizes = ({sizeList}) => sizeList;

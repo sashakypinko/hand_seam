@@ -65,5 +65,10 @@ export const ruTranslations = {
     'cart.list.footer-message': 'Не откладывайте покупку, добавление товаров в корзину не означает их бронирование.',
 
     'discount.accept-button': 'Получить',
-    'discount.decline-button': 'Нет, спасибо'
+    'discount.decline-button': 'Нет, спасибо',
+
+    'footer.about.link': 'О нас',
+    'footer.about.description': 'Мы специализируемся на изготоалении крутых и красивых футболок и худи. Если ты хочешь прикупить что нибудь, это хорошая идея сделать это с нами.',
+    'footer.products.link': 'Товары'
 };
+

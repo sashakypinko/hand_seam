@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useSelector} from "react-redux";
-import {selectProductList} from "../../../store/selectors";
+import {selectPopularProducts, selectProductList} from "../../../store/selectors";
 import {Trans} from "react-i18next";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTshirt} from "@fortawesome/free-solid-svg-icons";
@@ -37,7 +37,7 @@ const StyledSendRoundedIcon = styled(SendRoundedIcon)`
 `;
 
 const GreetingsSection = () => {
-    const {products} = useSelector(selectProductList);
+    const {products} = useSelector(selectPopularProducts);
 
     return (
         <div className="d-flex flex-wrap justify-content-between mt-4">

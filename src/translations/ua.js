@@ -66,5 +66,9 @@ export const uaTranslations = {
     'cart.list.footer-message': 'Не відкладайте покупку, додання товарів в кошик не означає іх бронювання.',
 
     'discount.accept-button': 'Отримати',
-    'discount.decline-button': 'Ні, дякую'
+    'discount.decline-button': 'Ні, дякую',
+
+    'footer.about.link': 'Про нас',
+    'footer.about.description': 'Ми спеціалзуємося на виготовленні крутих та гарних футболок та худі. Якщо ті хочеш щось прикупити, то є гарна ідея зрорбити це з нами',
+    'footer.products.link': 'Товари'
 };

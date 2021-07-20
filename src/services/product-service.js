@@ -6,6 +6,8 @@ class ProductService extends BaseService {
 
     getProduct = (id) => this.get('/products/get', {id});
 
+    getPopularProducts = (limit) => this.get('/products/get-popular', {limit});
+
     getPriceRange = () => this.get('/products/get-price-range');
 }
 

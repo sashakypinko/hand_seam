@@ -1,6 +1,1 @@
-
-const API_BASE_URL = 'http://shop.loc';
-
-export {
-    API_BASE_URL
-}
+export const API_BASE_URL = 'http://18.191.229.0'

@@ -1,11 +1,12 @@
 import React from 'react';
 import Section from "../section";
-import ProductsListContainer from "../../products/product-list-container";
+import PopularProducts from "../../products/popular-products";
 
 const PopularProductsSection = () => {
+
     return (
         <Section title="Популярные Товары">
-            <ProductsListContainer/>
+            <PopularProducts/>
         </Section>
     );
 };

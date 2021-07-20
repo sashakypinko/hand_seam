@@ -5,8 +5,14 @@ import {Row} from "styled-bootstrap-grid";
 import {selectCategoryList} from "../../../store/selectors";
 import {fetchCategories} from "../../../store/actions/category-list";
 import ErrorIndicator from "../../error-indicator";
+import CategoryListSkeleton from "./category-skeleton";
 
-const CategoryList = ({categories}) => {
+const CategoryList = ({categories, loading}) => {
+
+    if (loading) {
+        return <CategoryListSkeleton/>
+    }
+
     return (
         <Row>
             {
@@ -17,16 +23,18 @@ const CategoryList = ({categories}) => {
 };
 
 const CategoryListContainer = () => {
-    const {categories, error} = useSelector(selectCategoryList);
+    const {categories, loading, error} = useSelector(selectCategoryList);
     const dispatch = useDispatch();
 
-    useEffect(() => dispatch(fetchCategories()), []);
+    useEffect(() => {
+        dispatch(fetchCategories());
+    }, []);
 
     if (error) {
         return <ErrorIndicator/>;
     }
 
-    return <CategoryList categories={categories}/>
-}
+    return <CategoryList categories={categories} loading={loading}/>;
+};
 
 export default CategoryListContainer;

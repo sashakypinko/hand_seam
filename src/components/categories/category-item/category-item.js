@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Col} from "styled-bootstrap-grid";
 
 const CategoryItem = ({category}) => {
     const {id, title, photo} = category;
 
     return (
-        <div className="col-md-6 col-lg-4 mb-4">
-            <div className="">
+        <Col md={6} lg={4} className="mb-4">
+            <div>
                 <div className="view zoom brighten z-depth-2 rounded">
                     <img className="img-fluid"
                          src={photo}
@@ -22,7 +23,7 @@ const CategoryItem = ({category}) => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </Col>
     );
 };
 

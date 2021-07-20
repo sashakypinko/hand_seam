@@ -23,11 +23,14 @@ import {ADD_DISCOUNT_CODE_REQUEST, FETCH_DISCOUNTS_REQUEST, GET_DISCOUNT_CODES_R
 import {addDiscountCode, fetchDiscountCodes, fetchDiscounts} from "./discount";
 import {CHANGE_LANGUAGE_REQUEST, FETCH_CLIENT_REQUEST} from "../actions/client";
 import {changeLanguage, fetchClient} from "./client";
+import {FETCH_POPULAR_PRODUCTS_REQUEST} from "../actions/popular-products";
+import {fetchPopularProducts} from "./popular-products";
 
 function* rootSaga() {
     yield all([
         takeEvery(FETCH_PRODUCTS_REQUEST, fetchProducts),
         takeEvery(FETCH_PRODUCT_REQUEST, fetchProduct),
+        takeEvery(FETCH_POPULAR_PRODUCTS_REQUEST, fetchPopularProducts),
         takeEvery(FETCH_CATEGORIES_REQUEST, fetchCategories),
         takeEvery(FETCH_FILTER_FIELDS_REQUEST, fetchFilterFields),
         takeEvery(FETCH_SIZES_REQUEST, fetchSizes),

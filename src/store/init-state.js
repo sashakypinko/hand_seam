@@ -38,6 +38,12 @@ export const ProductListState = {
     total: 0
 };
 
+export const PopularProductsState = {
+    products: [],
+    error: null,
+    loading: true
+};
+
 export const SizeListState = {
     sizes: [],
     error: null,
