@@ -8,7 +8,6 @@ import {connectRouter} from "connected-react-router";
 
 const initStore = (history = {}) => {
     const sagaMiddleware = createSagaMiddleware();
-
     const store = createStore(
         combineReducers({
             ...reducers,
