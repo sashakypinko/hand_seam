@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Filters from "./fllters";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchProducts} from "../../store/actions/product-list";
@@ -23,6 +23,10 @@ const Products = ({loadProducts, pagesCount}) => {
 
         setCurrentPage(page);
     };
+
+    useEffect(() => {
+        loadProducts({page: currentPage})
+    }, [currentPage]);
 
     const handleChangeView = (type) => setViewType(type);
 
